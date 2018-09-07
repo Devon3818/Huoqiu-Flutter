@@ -68,6 +68,7 @@ class MainPageState extends State<MainPageWidget> {
       initData();
       // TODO: implement build
       return Scaffold(
+        backgroundColor: Colors.white,
         body: _pageList[_tabIndex],
         bottomNavigationBar: new BottomNavigationBar(
           items: <BottomNavigationBarItem>[
