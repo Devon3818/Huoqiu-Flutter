@@ -46,6 +46,20 @@ flutter:
    - images/present_selected.png
    - images/me.png
    - images/me_selected.png
+   - images/huiyuan.png
+   - images/more.png
+   - images/address.png
+   - images/history.png
+   - images/message.png
+   - images/order.png
+   - images/sales.png
+   - images/kefu.png
+   - images/setting.png
+   - images/shop.png
+   - images/cpours.png
+   - images/fankui.png
+   - images/open.png
+   - images/prents2.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
