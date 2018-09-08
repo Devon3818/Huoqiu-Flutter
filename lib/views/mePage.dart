@@ -36,10 +36,6 @@ class Page extends State<MePage> {
       )
     );
   }
-
-  Image getTabImage(path) {
-    return new Image.asset(path, width: 24.0, height: 24.0);
-  }
  
   Widget tabSetting(String title, String path) {
     return new Container(
@@ -47,22 +43,22 @@ class Page extends State<MePage> {
         color: Colors.white
       ),
       child: new FlatButton(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(15.0),
         onPressed: (){},
         child: new Row(
           children: <Widget>[
-            new Image.asset(path, width: 26.0, height: 26.0),
+            new Image.asset(path, width: 20.0, height: 20.0),
             new Text(
               '   ' + title,
               style: new TextStyle(
                 color: Colors.black45,
-                fontSize: 18.0
+                fontSize: 15.0
               )
             ),
             new Expanded(
               child: new Align(
                 alignment: Alignment.centerRight,
-                child:  new Image.asset('images/more.png', width: 18.0, height: 18.0),
+                child:  new Image.asset('images/more.png', width: 10.0, height: 10.0),
               )
             )
           ],

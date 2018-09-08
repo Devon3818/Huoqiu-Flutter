@@ -6,7 +6,6 @@ class GoodsPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
- 
     return new Page();
   }
 }
@@ -19,8 +18,8 @@ class Page extends State<GoodsPage> {
  
   Widget layout(BuildContext context) {
     return new Scaffold(
-      backgroundColor: Colors.white,
       appBar: buildAppBar(context),
+      backgroundColor: Colors.white,
       body: new ListView(
         children: <Widget>[
           card(shoplist[0]),
@@ -43,7 +42,7 @@ class Page extends State<GoodsPage> {
   Widget buildAppBar(BuildContext context) {
     return new AppBar(
       title: const Text('买手', style: const TextStyle(color: Color(0xFF616161))),
-      backgroundColor: Colors.grey[50]
+      backgroundColor: Colors.white
     );
   }
   
@@ -52,7 +51,7 @@ class Page extends State<GoodsPage> {
       padding: const EdgeInsets.only(top: 30.0, left: 15.0, right: 15.0),
       onPressed: (){},
       child: new Card(
-        elevation: 4.0,
+        elevation: 3.0,
         child: new Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
@@ -76,13 +75,14 @@ class Page extends State<GoodsPage> {
                     )
                   ),
                   new Container(
+                    width: 200.00,
                     child: new Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         new Container(
                           child: new Text(
                             shop.name,
-                            style: new TextStyle(height: 1.5, color: GlobalConfig.fontColor, fontSize: 15.0, fontWeight: FontWeight.w900,)
+                            style: new TextStyle(height: 1.0, color: GlobalConfig.fontColor, fontSize: 15.0, fontWeight: FontWeight.w900,)
                           ),
                           padding: new EdgeInsets.only(left: 10.0),
                         ),
@@ -90,15 +90,20 @@ class Page extends State<GoodsPage> {
                           child: new Row(
                             children: <Widget>[
                               new Container(
-                                color: Colors.grey[100],
-                                child: new FlatButton(onPressed: (){}, child: new Text(shop.tag1, style: new TextStyle(fontSize: 10.0)), color: GlobalConfig.searchBackgroundColor),
-                                height: 20.0,
+                                padding: new EdgeInsets.only(left: 5.0, right: 5.0, top: 4.0, bottom: 4.0),
+                                decoration: new BoxDecoration(
+                                  color: Colors.grey[100],
+                                ),
+                                child: new Text(shop.tag1, style: new TextStyle(fontSize: 7.0)),
                                 margin: const EdgeInsets.only(right: 8.0)
                               ),
                               new Container(
-                                color: Colors.grey[100],
-                                child: new FlatButton(onPressed: (){}, child: new Text(shop.tag2, style: new TextStyle(fontSize: 10.0)), color: GlobalConfig.searchBackgroundColor),
-                                height: 20.0,
+                                padding: new EdgeInsets.only(left: 5.0, right: 5.0, top: 4.0, bottom: 4.0),
+                                decoration: new BoxDecoration(
+                                  color: Colors.grey[100],
+                                ),
+                                child: new Text(shop.tag2, style: new TextStyle(fontSize: 7.0)),
+                                margin: const EdgeInsets.only(right: 8.0)
                               ),
                             ],
                           ),
@@ -118,7 +123,7 @@ class Page extends State<GoodsPage> {
                       children: <Widget>[
                         new Text(
                           shop.fansNum,
-                          style: new TextStyle(height: 1.5, color: GlobalConfig.fontColor, fontSize: 15.0, fontWeight: FontWeight.w900,)
+                          style: new TextStyle(height: 1.5, color: GlobalConfig.fontColor, fontSize: 13.0, fontWeight: FontWeight.w900,)
                         ),
                         new Text('粉丝', style: new TextStyle(color: Colors.black38, fontSize: 10.0))
                       ]
