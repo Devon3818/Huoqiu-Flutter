@@ -71,8 +71,7 @@ class Page extends State<HomePage> {
               ),
             ),
             new Container(
-              padding: const EdgeInsets.only(top: 10.0),                       //宽
-              height: 270.0,
+              height: 250.0,
               decoration: new BoxDecoration(
                 image: new DecorationImage(image: new NetworkImage(goods.banner)),
                 borderRadius: new BorderRadius.all(
@@ -87,7 +86,7 @@ class Page extends State<HomePage> {
                 softWrap: true,
                 overflow: TextOverflow.ellipsis,
                 maxLines: 2,
-                style: new TextStyle(height: 1.8, color: GlobalConfig.fontColor, fontSize: 20.0, fontWeight: FontWeight.w900,)
+                style: new TextStyle(height: 1.5, color: GlobalConfig.fontColor, fontSize: 20.0, fontWeight: FontWeight.w900,)
               ),
             ),
             new Align(
