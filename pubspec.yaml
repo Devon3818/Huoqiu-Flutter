@@ -60,6 +60,9 @@ flutter:
    - images/fankui.png
    - images/open.png
    - images/prents2.png
+   - images/banner1.jpg
+   - images/banner2.jpg
+   - images/banner3.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 import '../data/goods.dart';
 import '../globalConfig.dart';
  
+final List<String> images = [
+  'images/banner1.jpg', 
+  'images/banner2.jpg', 
+  'images/banner3.jpg',
+];
+
 class HomePage extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() {
-    // TODO: implement createState
- 
-    return new Page();
-  }
+  Page createState() => new Page();
 }
  
 class Page extends State<HomePage> {
@@ -24,6 +26,7 @@ class Page extends State<HomePage> {
       backgroundColor: Colors.white,
       body: new ListView(
         children: <Widget>[
+          banner(),
           goodsCard(goodsList[0]),
           goodsCard(goodsList[1]),
           goodsCard(goodsList[2]),
@@ -49,6 +52,43 @@ class Page extends State<HomePage> {
     return new AppBar(
       title: const Text('推荐', style: const TextStyle(color: Color(0xFF616161))),
       backgroundColor: Colors.white
+    );
+  }
+
+  Widget banner() {
+    return new Container(
+      child: SizedBox.fromSize(
+        size: Size.fromHeight(200.0),
+        child: PageView.builder(
+          controller: PageController(viewportFraction: 0.9),
+          itemCount: 3,
+          itemBuilder: (BuildContext context, int index) {
+            return Padding(
+              padding: EdgeInsets.symmetric(
+                vertical: 16.0,
+                horizontal: 8.0,
+              ),
+              child: GestureDetector(
+                onTap: () {},
+                child: Material(
+                  shadowColor: Colors.black26,
+                  elevation: 8.0,
+                  borderRadius: BorderRadius.circular(8.0),
+                  child: Stack(
+                    fit: StackFit.expand,
+                    children: [
+                      Image.asset(
+                        images[index],
+                        fit: BoxFit.cover,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            );
+          },
+        ),
+      ),
     );
   }
 

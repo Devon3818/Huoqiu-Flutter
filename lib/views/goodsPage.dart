@@ -22,6 +22,20 @@ class Page extends State<GoodsPage> {
       backgroundColor: Colors.white,
       body: new ListView(
         children: <Widget>[
+          section(),
+          new Container(
+            padding: EdgeInsets.only(left: 15.0, bottom: 15.0),
+            child: new Text(
+              '热门推荐',
+              textAlign: TextAlign.left, 
+              style: new TextStyle(
+                fontSize: 22.0, 
+                height: 1.5, 
+                color: GlobalConfig.fontColor, 
+                fontWeight: FontWeight.w900,
+              ),
+            ),
+          ),
           card(shoplist[0]),
           card(shoplist[1]),
           card(shoplist[2]),
@@ -45,10 +59,184 @@ class Page extends State<GoodsPage> {
       backgroundColor: Colors.white
     );
   }
+
+  Widget section() {
+    return new Container(
+      child: new Column(
+        children: <Widget>[
+          new Container(
+            margin: const EdgeInsets.all(15.0),
+            child: new Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                new Expanded(
+                  child: new Text(
+                    '买手俱乐部',
+                    textAlign: TextAlign.left, 
+                    style: new TextStyle(
+                      fontSize: 22.0, 
+                      height: 1.5, 
+                      color: GlobalConfig.fontColor, 
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
+                ),
+                new Expanded(
+                  child: new Container(
+                    child: new Text(
+                      '全部分类',
+                      textAlign: TextAlign.right,
+                      style: new TextStyle(
+                        height: 1.5, 
+                        color: Colors.red[300],
+                        fontWeight: FontWeight.w900
+                      )
+                    ),
+                  ),
+                )
+            ],
+            ),
+          ),
+          new Row(
+            children: <Widget>[
+              new Expanded(
+                child: new Container(
+                  margin: const EdgeInsets.only(left: 15.0,right: 4.0, bottom: 20.0),
+                  child: new Column(
+                    crossAxisAlignment: CrossAxisAlignment.start, 
+                    children: <Widget>[
+                      new Container(
+                        height: 105.00,
+                        child: new ClipRRect(
+                          borderRadius: const BorderRadius.all(const Radius.circular(10.0)),
+                          child: new FittedBox(
+                            fit: BoxFit.fitHeight,
+                            alignment: Alignment.topCenter,
+                            child: new Image.network('https://img.adidas.com.cn/resources/2018kvbanner/sep/feature-tuanyuan.jpg?version=000000'),
+                          ),
+                        )
+                      ),
+                      new Text(
+                        'AIX MAX 98 龙珠',
+                        textAlign: TextAlign.left,
+                        style: new TextStyle(
+                          height: 2.0, 
+                          color: GlobalConfig.fontColor, 
+                          fontSize: 15.0, 
+                          fontWeight: FontWeight.w900,
+                        )
+                      ),
+                    ],
+                  ),
+                )
+              ),
+              new Expanded(
+                child: new Container(
+                  margin: const EdgeInsets.only(left: 4.0,right: 15.0, bottom: 20.0),
+                  child: new Column(
+                    crossAxisAlignment: CrossAxisAlignment.start, 
+                    children: <Widget>[
+                      new Container(
+                        height: 105.00,
+                        child: new ClipRRect(
+                          borderRadius: const BorderRadius.all(const Radius.circular(10.0)),
+                          child: new FittedBox(
+                            fit: BoxFit.fitHeight,
+                            alignment: Alignment.topCenter,
+                            child: new Image.network('https://img.adidas.com.cn/resources/2017/9/QQ%E5%9B%BE%E7%89%8720171229141554.jpg?version=000000'),
+                          ),
+                        )
+                      ),
+                      new Text(
+                        'Y-3 KAIWA',
+                        textAlign: TextAlign.left,
+                        style: new TextStyle(
+                          height: 2.0, 
+                          color: GlobalConfig.fontColor, 
+                          fontSize: 15.0, 
+                          fontWeight: FontWeight.w900,
+                        )
+                      ),
+                    ],
+                  ),
+                )
+              ),
+            ],
+          ),
+          new Row(
+            children: <Widget>[
+              new Expanded(
+                child: new Container(
+                  margin: const EdgeInsets.only(left: 15.0,right: 4.0, bottom: 20.0),
+                  child: new Column(
+                    crossAxisAlignment: CrossAxisAlignment.start, 
+                    children: <Widget>[
+                      new Container(
+                        height: 105.00,
+                        child: new ClipRRect(
+                          borderRadius: const BorderRadius.all(const Radius.circular(10.0)),
+                          child: new FittedBox(
+                            fit: BoxFit.fitHeight,
+                            alignment: Alignment.topCenter,
+                            child: new Image.network('https://img.adidas.com.cn/resources/2018kvbanner/sep/feature-tuanyuan.jpg?version=000000'),
+                          ),
+                        )
+                      ),
+                      new Text(
+                        'AIX MAX 98 龙珠',
+                        textAlign: TextAlign.left,
+                        style: new TextStyle(
+                          height: 2.0, 
+                          color: GlobalConfig.fontColor, 
+                          fontSize: 15.0, 
+                          fontWeight: FontWeight.w900,
+                        )
+                      ),
+                    ],
+                  ),
+                )
+              ),
+              new Expanded(
+                child: new Container(
+                  margin: const EdgeInsets.only(left: 4.0,right: 15.0, bottom: 20.0),
+                  child: new Column(
+                    crossAxisAlignment: CrossAxisAlignment.start, 
+                    children: <Widget>[
+                      new Container(
+                        height: 105.00,
+                        child: new ClipRRect(
+                          borderRadius: const BorderRadius.all(const Radius.circular(10.0)),
+                          child: new FittedBox(
+                            fit: BoxFit.fitHeight,
+                            alignment: Alignment.topCenter,
+                            child: new Image.network('https://img.adidas.com.cn/resources/2017/9/QQ%E5%9B%BE%E7%89%8720171229141554.jpg?version=000000'),
+                          ),
+                        )
+                      ),
+                      new Text(
+                        'Y-3 KAIWA',
+                        textAlign: TextAlign.left,
+                        style: new TextStyle(
+                          height: 2.0, 
+                          color: GlobalConfig.fontColor, 
+                          fontSize: 15.0, 
+                          fontWeight: FontWeight.w900,
+                        )
+                      ),
+                    ],
+                  ),
+                )
+              ),
+            ],
+          )
+        ],
+      ),
+    );
+  }
   
   Widget card(Shop shop) {
     return new FlatButton(
-      padding: const EdgeInsets.only(top: 30.0, left: 15.0, right: 15.0),
+      padding: const EdgeInsets.only(bottom: 30.0, left: 15.0, right: 15.0),
       onPressed: (){},
       child: new Card(
         elevation: 3.0,
